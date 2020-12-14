@@ -6,7 +6,7 @@ import android.view.View
 import com.miqdad71.week5.R
 import kotlinx.android.synthetic.main.activity_calculator.*
 
-class  CalculatorActivity : AppCompatActivity() {
+class CalculatorActivity : AppCompatActivity() {
     private lateinit var calculator: Calculator
 
     override fun onCreate(savedInstanceState: Bundle?) {
