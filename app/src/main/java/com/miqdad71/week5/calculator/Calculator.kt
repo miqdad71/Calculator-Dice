@@ -30,7 +30,7 @@ class Calculator(private val textResult: TextView) : Operation() {
                 textResult.text = minus.toString()
                 result.append(minus)
             }
-            'X' -> {
+            'x' -> {
                 textResult.text = times.toString()
                 result.append(times)
             }
@@ -38,10 +38,14 @@ class Calculator(private val textResult: TextView) : Operation() {
                 textResult.text = dive.toString()
                 result.append(dive)
             }
+            '%' -> {
+                textResult.text = percent.toString()
+                result.append(percent)
+            }
         }
     }
 
-    fun clearNum() {
+    fun deleteNum() {
         val length = result.length
 
         if (length <= 1) {

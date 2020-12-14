@@ -8,7 +8,6 @@ import kotlinx.android.synthetic.main.activity_calculator.*
 
 class  CalculatorActivity : AppCompatActivity() {
     private lateinit var calculator: Calculator
-    private var viewNumber = StringBuilder()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,15 +15,6 @@ class  CalculatorActivity : AppCompatActivity() {
         supportActionBar?.title = getString(R.string.calculator)
 
         calculator = Calculator(text_result)
-
-        btn_zero.setOnClickListener {
-            viewNumber = viewNumber.append("0")
-            text_result.text = viewNumber.toString()
-        }
-
-        btn_minus.setOnClickListener {
-
-        }
     }
 
     fun onClickNumber(v: View?){
@@ -76,8 +66,11 @@ class  CalculatorActivity : AppCompatActivity() {
             R.id.btn_plus -> {
                 calculator.selectOperasional('+')
             }
-            R.id.btn_minus -> {
+            R.id.btn_min -> {
                 calculator.selectOperasional('-')
+            }
+            R.id.percent -> {
+                calculator.selectOperasional('%')
             }
         }
     }
@@ -88,10 +81,10 @@ class  CalculatorActivity : AppCompatActivity() {
                 calculator.clearNum("0")
             }
             R.id.btn_minplus -> {
-                calculator.clearNum()
+                calculator.deleteNum()
             }
             R.id.btn_delete -> {
-                calculator.clearNum()
+                calculator.deleteNum()
             }
             R.id.btn_result -> {
                 calculator.mathOperation()

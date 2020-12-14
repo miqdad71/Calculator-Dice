@@ -15,4 +15,7 @@ open class Operation {
 
     val times: Double
         get() = firstNum * secondNum
+
+    val percent: Double
+        get() = firstNum / 100
 }

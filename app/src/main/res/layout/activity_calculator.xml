@@ -33,12 +33,12 @@
         android:fontFamily="sans-serif-light"
         android:gravity="center_vertical|end"
         android:maxLines="1"
+        android:text="@string/zero"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
         android:textSize="50dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/formula"
-        tools:text="0" />
+        app:layout_constraintTop_toBottomOf="@id/formula"/>
 
     <Button
         android:id="@+id/btn_ac"
@@ -47,6 +47,7 @@
         android:layout_marginTop="70dp"
         android:layout_marginLeft="15dp"
         android:text="@string/ac"
+        android:onClick="onClickFunctional"
         android:textColor="@color/black"
         android:backgroundTint="@color/white"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,6 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
         android:text="@string/pm"
+        android:onClick="onClickFunctional"
         android:textColor="@color/black"
         android:backgroundTint="@color/white"
         app:layout_constraintStart_toEndOf="@id/btn_ac"
@@ -69,6 +71,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
         android:text="@string/percent"
+        android:onClick="onClickFunctional"
         android:textColor="@color/black"
         android:backgroundTint="@color/white"
         app:layout_constraintStart_toEndOf="@id/btn_minplus"
@@ -228,7 +231,7 @@
         app:layout_constraintTop_toBottomOf="@id/btn_six" />
 
     <Button
-        android:id="@+id/btn_minus"
+        android:id="@+id/btn_min"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -290,5 +293,5 @@
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn_result"
-        app:layout_constraintTop_toBottomOf="@id/btn_minus" />
+        app:layout_constraintTop_toBottomOf="@id/btn_min" />
 </androidx.constraintlayout.widget.ConstraintLayout>
